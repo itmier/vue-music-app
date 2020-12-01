@@ -1,3 +1,10 @@
+/*
+ * @Author: Tmier
+ * @Date: 2020-11-29 19:12:01
+ * @LastEditTime: 2020-12-01 23:47:34
+ * @Description: 
+ * @LastModifiedBy: Tmier
+ */
 var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
@@ -23,20 +30,21 @@ module.exports = {
     alias: {
       '@': resolve('src'),
       'common': resolve('src/common'),
-      'components': resolve('src/components')
+      'components': resolve('src/components'),
+      'api': resolve('src/api')
     }
   },
   module: {
     rules: [
-      {
-        test: /\.(js|vue)$/,
-        loader: 'eslint-loader',
-        enforce: 'pre',
-        include: [resolve('src'), resolve('test')],
-        options: {
-          formatter: require('eslint-friendly-formatter')
-        }
-      },
+      // {
+      //   test: /\.(js|vue)$/,
+      //   loader: 'eslint-loader',
+      //   enforce: 'pre',
+      //   include: [resolve('src'), resolve('test')],
+      //   options: {
+      //     formatter: require('eslint-friendly-formatter')
+      //   }
+      // },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
